@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Game</title>
+    <link rel="stylesheet" href="css/calculategame.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/hand-print.png" />
+  </head>
+  <body onload="start()">
+    <div id="game-title">Calculator Game</div>
+    <br />
+    <div class="container">
+      <div class="card">
+        <h3>Fill in the blank with correct answer</h3>
+        <div class="question-box">
+          <form class="form">
+            <label for="question" id="showquestions">1 + 2</label>
+          <br />
+          <input type="text" id="inputAnswer" placeholder="Answer Here" onkeypress="return event.keyCode != 13;"/>
+          </form>
+        </div>
+        <div class="btn">
+          <button id="reset" onclick="resetPage()">Reset</button>
+          <button id="check" onclick="openPopup()">Check</button>
+          <div class="popup" id="correctpopup">
+            <div class="dog1">
+              <img src="assets/img/laughing.png" />
+            </div>
+            <h4>Correct!</h4>
+            <div class="choicebtn">
+              <a href="calculategame.html">
+                <button id="playAgain">Play Again</button>
+              </a>
+              <a href="homepage.html">
+                <button id="homepage1">Homepage</button>
+              </a>
+            </div>
+          </div>
+          <div class="popup" id="wrongpopup">
+            <div class="dog1">
+              <img src="assets/img/cry.png" />
+            </div>
+            <h4>Incorrect. Try Again.</h4>
+            <div class="choicebtn">
+              <a href="calculategame.html">
+                <button id="playAgain">Play Again</button>
+              </a>
+              <a href="homepage.html">
+                <button id="homepage1">Homepage</button>
+              </a>
+            </div>
+          </div>
+          <div class="popup" id="inputpopup">
+            <div class="dog1">
+              <img src="assets/img/cry.png" />
+            </div>
+            <h4>Please Input Your Answer.</h4>
+            <div class="choicebtn">
+              <a href="calculategame.html">
+                <button id="playAgain">Play Again</button>
+              </a>
+              <a href="homepage.html">
+                <button id="homepage1">Homepage</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="homepage">
+      <a href="homepage.html">
+        <button id="backhomepage">Homepage</button>
+      </a>
+    </div>
+    <output></output>
+    <script src="js/calculate.js"></script>
+  </body>
+  <style>
+    .dog1 {
+      display: flex;
+      justify-content: center;
+    }
+    .popup {
+      margin-top: 20px;
+      width: 320px;
+      height: 200px;
+      background-color: #f0fcf1;
+      border-radius: 50px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.1);
+      text-align: center;
+      padding: 0 30px 30px;
+      visibility: hidden;
+      transition: tranform 0.4s, top 0.4s;
+    }
+    .open-popup {
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup img {
+      width: 130px;
+      height: 130px;
+      margin-top: -60px;
+    }
+
+    .choicebtn {
+      display: flex;
+      justify-content: center;
+    }
+
+    #playAgain {
+      padding: 10px 10px 10px 10px;
+      background-color: #d6f8e1;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: "Comic Sans MS";
+      font-weight: 400;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
+    #homepage1 {
+      padding: 10px 10px 10px 10px;
+      background-color: #76cfb8;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: "Comic Sans MS";
+      font-weight: 400;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
+
+    #playAgain:hover,
+    #homepage1:hover {
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: darkgreen;
+      transform: translateY(-1px);
+    }
+
+    #playAgain {
+      margin-left: 5px;
+    }
+
+    #homepage1 {
+      margin-left: 40px;
+    }
+    .card h4 {
+      font-size: 24px;
+      margin-top: 15px;
+    }
+  </style>
+</html>

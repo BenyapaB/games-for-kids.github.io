@@ -1,0 +1,65 @@
+/* @media only screen and (min-width: 600px) {
+    body {
+      background-image: url(assets/img/school-bg5.jpg);
+      background-size: cover;
+      display: inline;
+    }
+} */
+
+body{
+    background-image: url(../assets/img/school-bg5.jpg);
+    background-size: cover;
+    display: inline;
+}
+
+/*font-*/
+#game-title,
+#select-game {
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+
+#game-title {
+  font-size: 91px;
+  font-weight: bolder;
+  padding-top: 30px;
+  text-shadow: 1px 1px 6px black;
+}
+
+#select-game {
+  font-size: 36px;
+  padding-top: 25px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 5px 2px 8px black;
+}
+
+#game-choose {
+  margin: auto;
+  padding-top: 50px;
+  width: fit-content;
+  justify-items: center;
+}
+
+#matching-game,
+#cal-game,
+#group-game {
+  padding: 35px;
+  background-color: #d6f8e1;
+  border: none;
+  border-radius: 10px;
+  margin-right: 40px;
+  font-size: larger;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+#matching-game:hover,
+#cal-game:hover,
+#group-game:hover {
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: darkgreen;
+  transform: translateY(-7px);
+}

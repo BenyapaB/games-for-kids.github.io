@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="css/matching-game.css" />
+    <link rel="icon" type="image/x-icon" href="assets/img/hand-print.png" />
+    <link rel="stylesheet" href="js/matching.js" />
+    <script>
+      var audio = new Audio("assets/audio/Carefree.mp3");
+      function start() {
+        audio.play();
+        audio.volume(0.8);
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <div id="game-title">Matching Game</div>
+    <div class="container">
+      <div class="popup">
+        <div class="dog1">
+          <img src="assets/img/laughing.png" />
+        </div>
+        <h3>Congratulations !! You finish this Game!</h3>
+        <div class="choicebtn">
+          <a href="matching-game.html">
+            <button id="playAgain">Play Again</button>
+          </a>
+          <a href="homepage.html">
+            <button id="homepage">Homepage</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <style>
+    @media only screen and (min-width: 600px) {
+      body {
+        background-image: url(assets/img/school-bg5.jpg);
+        background-size: cover;
+        display: inline;
+      }
+    }
+    #game-title {
+      background-color: #76cfb8;
+      font-weight: bold;
+      margin: auto;
+      padding: 20px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      width: fit-content;
+      justify-items: center;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .dog1 {
+      display: flex;
+      justify-content: center;
+    }
+    .popup {
+      margin-top: 20px;
+      width: 320px;
+      height: 200px;
+      background-color: #f0fcf1;
+      border-radius: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 0 30px 30px;
+    }
+
+    .popup img {
+      width: 130px;
+      height: 130px;
+      margin-top: -60px;
+    }
+    .choicebtn {
+      display: flex;
+      justify-content: center;
+    }
+
+    #playAgain {
+      padding: 10px 10px 10px 10px;
+      background-color: #d6f8e1;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: "Comic Sans MS";
+      font-weight: 400;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
+    #homepage {
+      padding: 10px 10px 10px 10px;
+      background-color: #76cfb8;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: "Comic Sans MS";
+      font-weight: 400;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
+
+    #playAgain:hover,
+    #homepage:hover {
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: darkgreen;
+      transform: translateY(-1px);
+    }
+
+    #playAgain {
+      margin-left: 5px;
+    }
+
+    #homepage {
+      margin-left: 40px;
+    }
+  </style>
+</html>
